@@ -17,3 +17,16 @@ std::vector<int> tag13 = {24, 28, 33, 34, 36, 43, 45, 46, 48, 57, 58, 63, 68, 74
 std::vector<int> tag14 = {24, 27, 28, 33, 35, 38, 43, 44, 46, 53, 56, 65, 66, 67, 68, 73, 75, 78};
 
 
+int main(){
+    std::vector<int> aprilTagExample(100, 0);
+    for(int i = 0; i < 10; i++){
+        for(j = 0; j < 10; j++){
+            if(i == 0 || j == 0 || i == 9 || j ==9)
+                aprilTagExample[i+j*10] = 1; 
+        }
+    }
+    for(auto&i : tag0)
+        aprilTagExample[i] = 1; 
+}
+
+
