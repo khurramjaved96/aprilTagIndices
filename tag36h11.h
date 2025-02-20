@@ -1,4 +1,5 @@
 #include <vector> 
+#include <iostream> 
 
 std::vector<int> tag0 = {23, 24, 26, 28, 34, 35, 36, 38, 44, 45, 53, 55, 64, 66, 67, 76};
 std::vector<int> tag1 = {23, 24, 26, 27, 34, 36, 37, 38, 43, 44, 45, 46, 54, 55, 63, 65, 66, 68, 75, 78};
@@ -27,6 +28,14 @@ int main(){
     }
     for(auto&i : tag0)
         aprilTagExample[i] = 1; 
+    
+    for(int i = 0; i < 10; i++){
+        for(int j = 0; j < 10; j++){
+            if (aprilTagExample[i*10 + j]) std::cout << "O"; 
+            else std::cout << " "; 
+        }
+        std::cout << "\n";
+    }
 }
 
 
